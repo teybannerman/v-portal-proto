@@ -1,0 +1,33 @@
+@import url('../fonts/stylesheet.css');
+
+@import 'variables';
+
+
+body {
+  background: $body-bg-color url('../../images/vodafone-logo.png') left top no-repeat;
+  font-family: $font-body;
+}
+
+.button {
+  font-family: $font-body;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  
+  &.primary, &.tertiary {
+    @include font-body('semibold');
+    background: $btn-primary-bg;
+    border-radius: $btn-primary-radius;
+    padding-top: 0.5rem;
+    padding-bottom: 0.675rem;
+  }
+  
+  &.tertiary {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-transform: none;
+    background: $c-white;
+    color: $c-voda-purple;
+    border: 1px solid $c-medium-grey;
+    margin-right: 16px;
+  }
+}

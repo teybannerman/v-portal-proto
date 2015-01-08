@@ -1,0 +1,45 @@
+// Global Colors
+
+$c-white:         #FFFFFF;
+$c-voda-red:      #E91E1E;
+$c-voda-purple:   #9B319E;
+$c-lightest-grey: #EEEEEE;
+$c-light-grey:    #D8D7D8;
+$c-medium-grey:   #B8B6B8;
+$c-dark-grey:     #474547;
+
+
+$font-body:       'freightsans_promedium', Helvetica, Arial, 'sans-serif';
+
+
+@function font-body-value($value) {
+  @if $value == "bold" {
+    @return 'freightsans_probold';
+  }
+  @if $value == "semibold" {
+    @return 'freightsans_prosemibold';
+  }
+  @if $value == "book" {
+    @return 'freightsans_probook';
+  }
+  @if $value == "light" {
+    @return 'freightsans_prolight';
+  }
+  @else {
+    @return 'freightsans_promedium';
+  }
+}
+
+@mixin font-body($style: medium) {
+  font-family: font-body-value($style);
+}
+
+
+
+// Theme Colors
+
+$body-bg-color:   $c-white;
+
+
+$btn-primary-bg:  $c-voda-purple;
+$btn-primary-radius: 26px;
