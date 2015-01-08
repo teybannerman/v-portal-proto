@@ -78,3 +78,45 @@
     font-style: normal;
 
 }
+
+
+@font-face {
+    font-family: 'vodafone_rgregular';
+    src: url('vodafonerg-webfont.eot');
+    src: url('vodafonerg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('vodafonerg-webfont.woff2') format('woff2'),
+         url('vodafonerg-webfont.woff') format('woff'),
+         url('vodafonerg-webfont.ttf') format('truetype'),
+         url('vodafonerg-webfont.svg#vodafone_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'vodafone_rgbold';
+    src: url('vodafonerg_bd-webfont.eot');
+    src: url('vodafonerg_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('vodafonerg_bd-webfont.woff2') format('woff2'),
+         url('vodafonerg_bd-webfont.woff') format('woff'),
+         url('vodafonerg_bd-webfont.ttf') format('truetype'),
+         url('vodafonerg_bd-webfont.svg#vodafone_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'vodafone_ltregular';
+    src: url('vodafonelt-webfont.eot');
+    src: url('vodafonelt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('vodafonelt-webfont.woff2') format('woff2'),
+         url('vodafonelt-webfont.woff') format('woff'),
+         url('vodafonelt-webfont.ttf') format('truetype'),
+         url('vodafonelt-webfont.svg#vodafone_ltregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -9,8 +9,14 @@ $c-medium-grey:   #B8B6B8;
 $c-dark-grey:     #474547;
 
 
-$font-body:       'freightsans_promedium', Helvetica, Arial, 'sans-serif';
+// Theme Colors
 
+$body-bg-color:   $c-white;
+
+
+// Fonts
+
+$font-body: 'freightsans_promedium', Helvetica, Arial, 'sans-serif';
 
 @function font-body-value($value) {
   @if $value == "bold" {
@@ -30,16 +36,30 @@ $font-body:       'freightsans_promedium', Helvetica, Arial, 'sans-serif';
   }
 }
 
-@mixin font-body($style: medium) {
-  font-family: font-body-value($style);
+@function font-heading-value($value) {
+  @if $value == "bold" {
+    @return 'vodafone_rgbold';
+  }
+  @if $value == "light" {
+    @return 'vodafone_ltregular';
+  }
+  @else {
+    @return 'vodafone_rgregular';
+  }
 }
 
 
 
-// Theme Colors
+@mixin font-body($style: medium) {
+  font-family: font-body-value($style);
+}
 
-$body-bg-color:   $c-white;
+@mixin font-heading($style: medium) {
+  font-family: font-heading-value($style);
+}
 
+
+// Buttons
 
 $btn-primary-bg:  $c-voda-purple;
 $btn-primary-radius: 26px;

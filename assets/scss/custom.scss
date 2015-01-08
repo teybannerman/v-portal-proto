@@ -3,10 +3,46 @@
 @import 'variables';
 
 
+// Layout
+
 body {
   background: $body-bg-color url('../../images/vodafone-logo.png') left top no-repeat;
   font-family: $font-body;
 }
+
+.content-header {
+ margin-top: 1rem; 
+}
+
+
+// Typography
+
+h1, h2, h3, h4 {
+  @include font-body('book');
+}
+
+h5, h6 {
+  @include font-heading('medium');
+  color: $c-voda-red;
+  display: inline-block;
+  border-bottom: 1px solid $c-voda-red;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+strong {
+  @include font-body('medium');
+}
+
+.content-heading {
+  background: none;
+  border: none;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+
+// Buttons 
 
 .button {
   font-family: $font-body;
@@ -17,17 +53,55 @@ body {
     @include font-body('semibold');
     background: $btn-primary-bg;
     border-radius: $btn-primary-radius;
-    padding-top: 0.5rem;
-    padding-bottom: 0.675rem;
+    padding: 0.5rem 1.5rem 0.6rem;
   }
   
   &.tertiary {
-    padding-right: 1rem;
-    padding-left: 1rem;
     text-transform: none;
     background: $c-white;
     color: $c-voda-purple;
     border: 1px solid $c-medium-grey;
-    margin-right: 16px;
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+}
+
+.sizer-button {
+  margin-right: 0.75rem;
+}
+
+.button.block {
+  display: block; 
+}
+
+.block-link {
+  border: 1px solid $c-light-grey;
+  display: block;
+  padding: 0.75rem 1rem;
+  color: $c-dark-grey;
+}
+
+
+// Navigation
+
+.side-nav.primary {
+  @include font-body('semibold');
+  padding-top: 0;
+  
+  li {
+    border-left: 6px solid $body-bg-color;
+   
+    a:not(.button) {
+      color: $c-voda-purple;
+    }
+  }
+  
+  li.active {
+     border-left: 6px solid $c-voda-purple;
+    
+     > a:first-child:not(.button) {
+       @include font-body('semibold');
+       color: $c-voda-purple;
+     }
   }
 }
