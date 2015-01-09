@@ -3,14 +3,24 @@
     <div class="row">
       <div class="large-12 columns">
         <div class="panel content-heading">
-          <h3>Suche in <strong>Allen Portalen</strong></h3>
+          <div class="searcher">
+            <div class="search-text"><input type="text" placeholder="Suche"/></div> 
+            <div class="search-select">in Allen Portalen <span class="triangle-down"></span>
+              <ul class="submenu">
+                <li> <a href="#">InfoWeb</a> </li>
+                <li> <a href="#">Hardware</a> </li>
+                <li> <a href="#">CallYa</a> </li>
+                <li> <a href="#">Wilma</a> </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="large-2 medium-3 columns">
-        <ul class="side-nav primary" role="navigation" title="Portal Link List">
+        <ul class="side-nav primary ver2" role="navigation" title="Portal Link List">
           <li role="menuitem" class="active"><a href="#">AskVodafone</a></li>
           <li role="menuitem"><a href="#">InfoWeb</a></li>
           <li role="menuitem"><a href="#">Hardware</a></li>
@@ -42,7 +52,15 @@
 
 
       <div class="large-2 medium-12 columns">
-        <p><a href="#" class="tertiary block button">Phone Number</a></p>
+        <p><a href="#" class="tertiary button expand">Phone Number</a></p>
+        <h6>Vorschlage</h6>
+        <ul class="side-nav secondary">
+          <li role="menuitem"><a href="#">Karte &amp; Netz</a></li>
+          <li role="menuitem"><a href="#">Mailbox &amp; Erreichbarkeit</a></li>
+          <li role="menuitem"><a href="#">Selfservice</a></li>
+          <li role="menuitem"><a href="#">Unterwegs</a></li>
+          <li role="menuitem"><a href="#">Internet &amp; Messaging</a></li>
+        </ul>
       </div>
     </div>
 {% endblock %}

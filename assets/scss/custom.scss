@@ -17,17 +17,27 @@ body {
 
 // Typography
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   @include font-body('book');
 }
 
-h5, h6 {
+h4, h5 {
   @include font-heading('medium');
   color: $c-voda-red;
   display: inline-block;
   border-bottom: 1px solid $c-voda-red;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
+}
+
+h6 {
+  @include font-body('bold');
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid $c-dark-grey;
 }
 
 strong {
@@ -38,7 +48,7 @@ strong {
   background: none;
   border: none;
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
 }
 
 
@@ -79,6 +89,11 @@ strong {
   display: block;
   padding: 0.75rem 1rem;
   color: $c-dark-grey;
+    
+  &:hover {
+    -webkit-animation: bounce 1s ease-in ;
+    animation: bounce 1s ease-in;
+  }
 }
 
 
@@ -104,4 +119,163 @@ strong {
        color: $c-voda-purple;
      }
   }
+}
+
+.side-nav.primary.ver2 {
+  
+  li {
+    border-left: none;
+    display: block;
+    
+    a {
+      float: right;
+      clear: both;
+      border: 1px solid $c-voda-purple;
+      margin-bottom: 0.5rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.side-nav.secondary {
+  @include font-body('book');
+  padding: 0;
+  
+  li {
+    margin-bottom: 1rem; 
+    
+    a {
+      background: none;
+      color: $c-dark-grey;
+      padding: 0;
+      line-height: 1rem;
+    }
+    
+    a:hover {
+      background: none;
+      color: $c-voda-purple;
+    }
+  }
+}
+
+
+// Searcher
+
+.searcher {
+  @include font-body('light');
+  font-size: 2rem;
+  text-align: center;
+  
+  > div {
+    display: inline-block;
+  }
+  
+  .search-text {
+    color: $c-medium-grey;
+    transition: all .3s ease-in-out;
+    width: 76px;
+    
+    &.selected {
+      min-width: 300px;
+    }
+    
+    input {
+      outline: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font-size: 2rem;
+      display: block;
+      box-shadow: none;
+      transition: none;
+      width: 100%;
+      
+      &:focus {
+        background: none;
+      }
+    }
+  }
+  
+  .search-select {
+    @include font-body('medium');
+    color: $c-voda-purple;
+    position: relative;
+    
+    ul {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
+    
+    &:hover ul {
+      display: block;
+    }
+  }
+}
+
+.submenu {
+  width: 240px;
+  padding: 0px 0px 10px 0;
+  margin: 0px;
+  background: #fff;
+  border: 1px solid $c-voda-purple;
+  z-index: 3;
+  /*  Dropdown shadow */
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
+  /* Animation */
+  -moz-animation: fadeInDown .3s ease-in ;
+  -webkit-animation: fadeIn .3s ease-in ;
+  animation:fadeInDown .3s ease-in ;
+  
+  li{
+    text-align: left;
+    padding: 0.5rem 0 0 2rem;;
+    margin: 0px;
+    display: block;
+    float: none;
+    line-height: 3.5rem;
+    font-size: 1.25rem;
+    
+    a {
+      background: #fff;
+      color: $c-voda-purple;
+    }
+  }
+}
+.submenu:after, .submenu:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.submenu:after {
+	border-color: rgba(213, 213, 213, 0);
+	border-bottom-color: #fff;
+	border-width: 5px;
+	margin-left: -5px;
+}
+.submenu:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: $c-voda-purple;
+	border-width: 6px;
+	margin-left: -6px;
+}
+
+// Miscellaneous UI Elements
+
+.triangle-down {
+  width: 0; 
+  height: 0; 
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid $c-voda-purple;
+  display: inline-block;
+  padding-top: 3px;
 }
