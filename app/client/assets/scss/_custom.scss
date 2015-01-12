@@ -1,12 +1,18 @@
 @import url('../fonts/stylesheet.css');
 
 @import 'variables';
+@import 'animation';
+
+
+.overflow-visible {
+  overflow: visible;
+}
 
 
 // Layout
 
 body {
-  background: $body-bg-color url('../../images/vodafone-logo.png') left top no-repeat;
+  background: $body-bg-color url('../images/vodafone-logo.png') left top no-repeat;
   font-family: $font-body;
 }
 
@@ -74,6 +80,10 @@ strong {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
   }
+}
+
+.tertiary-buttons > .button {
+  @extend .button.tertiary;
 }
 
 .sizer-button {
@@ -194,6 +204,7 @@ strong {
       box-shadow: none;
       transition: none;
       width: 100%;
+      line-height: normal;
       
       &:focus {
         background: none;
@@ -283,4 +294,11 @@ strong {
   border-top: 5px solid $c-voda-purple;
   display: inline-block;
   padding-top: 3px;
+}
+
+.portal-options {
+  transition: all .3s ease-in-out;
+  -moz-animation: fadeInDown .3s ease-in ;
+  -webkit-animation: fadeIn .3s ease-in ;
+  animation:fadeInDown .3s ease-in ;
 }

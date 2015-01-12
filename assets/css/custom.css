@@ -111,42 +111,46 @@ strong {
     border: 1px solid #9B319E;
     margin-bottom: 0.5rem;
     margin-right: 1rem; }
+  /* line 138, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+  .side-nav.primary.ver2 li a:hover, .side-nav.primary.ver2 li a.active:hover {
+    background: #9B319E;
+    color: #FFFFFF !important; }
 
-/* line 140, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+/* line 145, /Users/tey/v-portal-proto/assets/scss/custom.scss */
 .side-nav.secondary {
   font-family: 'freightsans_probook';
   padding: 0; }
-  /* line 144, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+  /* line 149, /Users/tey/v-portal-proto/assets/scss/custom.scss */
   .side-nav.secondary li {
     margin-bottom: 1rem; }
-    /* line 147, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+    /* line 152, /Users/tey/v-portal-proto/assets/scss/custom.scss */
     .side-nav.secondary li a {
       background: none;
       color: #474547;
       padding: 0;
       line-height: 1rem; }
-    /* line 154, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+    /* line 159, /Users/tey/v-portal-proto/assets/scss/custom.scss */
     .side-nav.secondary li a:hover {
       background: none;
       color: #9B319E; }
 
-/* line 164, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+/* line 169, /Users/tey/v-portal-proto/assets/scss/custom.scss */
 .searcher {
   font-family: 'freightsans_prolight';
   font-size: 2rem;
   text-align: center; }
-  /* line 169, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+  /* line 174, /Users/tey/v-portal-proto/assets/scss/custom.scss */
   .searcher > div {
     display: inline-block; }
-  /* line 173, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+  /* line 178, /Users/tey/v-portal-proto/assets/scss/custom.scss */
   .searcher .search-text {
     color: #B8B6B8;
     transition: all .3s ease-in-out;
     width: 76px; }
-    /* line 178, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+    /* line 183, /Users/tey/v-portal-proto/assets/scss/custom.scss */
     .searcher .search-text.selected {
       min-width: 300px; }
-    /* line 182, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+    /* line 187, /Users/tey/v-portal-proto/assets/scss/custom.scss */
     .searcher .search-text input {
       outline: none;
       border: none;
@@ -157,25 +161,25 @@ strong {
       box-shadow: none;
       transition: none;
       width: 100%; }
-      /* line 193, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+      /* line 198, /Users/tey/v-portal-proto/assets/scss/custom.scss */
       .searcher .search-text input:focus {
         background: none; }
-  /* line 199, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+  /* line 204, /Users/tey/v-portal-proto/assets/scss/custom.scss */
   .searcher .search-select {
     font-family: 'freightsans_promedium';
     color: #9B319E;
     position: relative; }
-    /* line 204, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+    /* line 209, /Users/tey/v-portal-proto/assets/scss/custom.scss */
     .searcher .search-select ul {
       display: none;
       position: absolute;
       top: 60px;
       left: 0; }
-    /* line 211, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+    /* line 216, /Users/tey/v-portal-proto/assets/scss/custom.scss */
     .searcher .search-select:hover ul {
       display: block; }
 
-/* line 217, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+/* line 222, /Users/tey/v-portal-proto/assets/scss/custom.scss */
 .submenu {
   width: 240px;
   padding: 0px 0px 10px 0;
@@ -190,7 +194,7 @@ strong {
   -moz-animation: fadeInDown .3s ease-in;
   -webkit-animation: fadeIn .3s ease-in;
   animation: fadeInDown .3s ease-in; }
-  /* line 232, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+  /* line 237, /Users/tey/v-portal-proto/assets/scss/custom.scss */
   .submenu li {
     text-align: left;
     padding: 0.5rem 0 0 2rem;
@@ -199,12 +203,12 @@ strong {
     float: none;
     line-height: 3.5rem;
     font-size: 1.25rem; }
-    /* line 241, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+    /* line 246, /Users/tey/v-portal-proto/assets/scss/custom.scss */
     .submenu li a {
       background: #fff;
       color: #9B319E; }
 
-/* line 247, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+/* line 252, /Users/tey/v-portal-proto/assets/scss/custom.scss */
 .submenu:after, .submenu:before {
   bottom: 100%;
   left: 50%;
@@ -215,21 +219,21 @@ strong {
   position: absolute;
   pointer-events: none; }
 
-/* line 258, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+/* line 263, /Users/tey/v-portal-proto/assets/scss/custom.scss */
 .submenu:after {
   border-color: rgba(213, 213, 213, 0);
   border-bottom-color: #fff;
   border-width: 5px;
   margin-left: -5px; }
 
-/* line 264, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+/* line 269, /Users/tey/v-portal-proto/assets/scss/custom.scss */
 .submenu:before {
   border-color: rgba(194, 225, 245, 0);
   border-bottom-color: #9B319E;
   border-width: 6px;
   margin-left: -6px; }
 
-/* line 273, /Users/tey/v-portal-proto/assets/scss/custom.scss */
+/* line 278, /Users/tey/v-portal-proto/assets/scss/custom.scss */
 .triangle-down {
   width: 0;
   height: 0;
