@@ -14,14 +14,25 @@
       <div class="grid-content shrink overflow-visible">
         <!-- Header Content -->
         <header class="content-header">
-          <div class="row" ng-class="['ui-animation']">
+          <div class="row" ng-controller="PortalCtrl">
             <div class="large-12 columns">
-              <a href="#" class="button primary float-right" ng-click="portalToggle = !portalToggle">Credit</a>
-              <div class="float-right portal-options slide-right" ng-show="portalToggle" ng-animate>Portals</div>
-              <div zf-action-sheet="" class="sizer-button float-right">
+              <a href="#" class="button primary active float-right" ng-class="activePortal" ng-click="portalToggle = !portalToggle" ng-show="!portalToggle">Credit</a>
+              <div class="float-right portal-options slide-right" ng-show="portalToggle" ng-animate>
+                <a href="#" class="button primary agent" ng-click="changePortal('agent')">Agent</a>
+                <a href="#" class="button primary credit active" ng-click="changePortal('credit')">Credit</a>
+                <a href="#" class="button primary athome" ng-click="changePortal('athome')">At Home</a>
+                <a href="#" class="button primary debit" ng-click="changePortal('debit')">Debit</a>
+                <a href="#" class="button primary dsl" ng-click="changePortal('dsl')">DSL</a>
+              </div>
+              <div zf-action-sheet="" class="access-sizer float-right">
                 <div zf-as-button="" title="Aa" class="tertiary-buttons"></div>
                 <div zf-as-content="" position="bottom">
-                  <p>font size changer</p>
+                  <div class="change-font">
+                    <a class="font0" ng-click="changeFont(0)"><span>Aa</span></a>
+                    <a class="font1 active" ng-click="changeFont(1)"><span>Aa</span></a>
+                    <a class="font2" ng-click="changeFont(2)"><span>Aa</span></a>
+                  </div>
+                  <div class="change-contrast">
                   <p><input type="range" min="0" max="2" value="0" id="contrast-changer" class="round"></p>
                 </div>
               </div>

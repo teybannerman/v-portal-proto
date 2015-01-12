@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('application', [
+  var app = angular.module('application', [
     'ui.router',
     'ngAnimate',
 
@@ -30,24 +30,22 @@
   function run() {
     FastClick.attach(document.body);
   }
+  
+  app.controller('PortalCtrl', function($scope) {
+    $scope.activePortal = 'credit';
+    
+    $scope.changePortal = function(portal) {
+      $scope.activePortal = portal;
+      $scope.portalToggle = !$scope.portalToggle;
+      $('body').removeClass().addClass(portal);
+    }
+    
+    $scope.changeFont = function(size) {
+      $('html').removeClass('size0 size1 size2').addClass('size'+size);
+    }
+    
+    
+  });
 
 })();
 
-
-
-//jQuery(function() {
-//  
-//  jQuery('.search-text input').focus(function() {
-//    jQuery(this).parent().addClass('selected');
-//    alert(1);
-//  });
-//  jQuery('.search-text input').blur(function() {
-//    $this = jQuery(this);
-//    $this.parent().removeClass('selected');
-//    if ($this.val() !== '') {
-//      $this.attr('size', $this.val().length);
-//    }
-//  });
-//  
-//  
-//});

@@ -4,6 +4,8 @@
 @import 'animation';
 
 
+// Helper Classes
+
 .overflow-visible {
   overflow: visible;
 }
@@ -65,11 +67,21 @@ strong {
   font-size: 0.8125rem;
   text-transform: uppercase;
   
-  &.primary, &.tertiary {
+  &.primary, &.secondary, &.tertiary {
     @include font-body('semibold');
-    background: $btn-primary-bg;
+    background: $c-white;
+    color: $btn-primary-bg;
+    border: 1px solid $btn-primary-bg;
     border-radius: $btn-primary-radius;
     padding: 0.5rem 1.5rem 0.6rem;
+  }
+  
+  &.primary {
+    
+    &.active {
+      background: $btn-primary-bg;
+      color: $c-white;
+    }
   }
   
   &.tertiary {
@@ -86,8 +98,64 @@ strong {
   @extend .button.tertiary;
 }
 
-.sizer-button {
+.access-sizer {
   margin-right: 0.75rem;
+  
+  .change-font {
+    display: flex;
+    height: 50px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #DDD;
+    
+    a {
+      flex-grow: 1;
+      height: 50px;
+      text-align: center;
+      position: relative;
+      color: $c-light-grey;
+      cursor: grabbing;
+      
+      &:hover {
+        color: $c-medium-grey;
+      }
+      
+      &.active {
+        color: $c-dark-grey;
+      }
+      
+      span {
+        width: 100%;
+        left: 0;
+        bottom: 13px;
+        position: absolute;
+        line-height: 1em;
+        text-align: center;
+      }
+    }
+    
+    .font0 {
+      font-size: 12px;
+    }
+    .font1 {
+      font-size: 16px;
+    }
+    .font2 {
+      font-size: 22px;
+    }
+  }
+  
+  .change-contrast {
+    padding: 0 1rem;
+    
+    input {
+      height: 0.4rem;
+    }
+  }
+  
+  .action-sheet {
+    width: 180px;
+    padding: 0;
+  }
 }
 
 .button.block {
@@ -104,6 +172,50 @@ strong {
     -webkit-animation: bounce 1s ease-in ;
     animation: bounce 1s ease-in;
   }
+}
+
+
+// Portal Custom Colors
+
+@each $portal, $color in $portals {
+  
+  body.#{$portal} {
+    .searcher .search-select,
+    .side-nav.primary.ver2 li a,
+    .side-nav.primary.ver2 li.active a,
+    .button.tertiary, .tertiary-buttons > .button
+    {
+      color: $color;
+    }
+    .side-nav.primary.ver2 li a {
+      border-color: $color;
+    }
+    .side-nav.primary.ver2 li a:hover {
+      background: $color;
+    }
+    .triangle-down {
+      border-top-color: $color;
+    }
+  }
+  
+  .button.#{$portal} {
+    border-color: $color;
+    color: $color;
+    
+    &.active {
+      background: $color;
+    }
+  }
+}
+
+// Accessibility Adjuster
+
+html.size0 {
+  font-size: 90%;
+}
+
+html.size2 {
+  font-size: 109%;
 }
 
 
@@ -143,6 +255,7 @@ strong {
       border: 1px solid $c-voda-purple;
       margin-bottom: 0.5rem;
       margin-right: 1rem;
+      padding: .35rem .9rem
     }
     
     a:hover, a.active:hover {
@@ -180,6 +293,7 @@ strong {
   @include font-body('light');
   font-size: 2rem;
   text-align: center;
+  margin-bottom: 3rem;
   
   > div {
     display: inline-block;
