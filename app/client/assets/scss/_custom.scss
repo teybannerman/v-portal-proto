@@ -2,7 +2,14 @@
 
 @import 'variables';
 @import 'animation';
+@import 'custom-forms';
 
+
+// Overrides 
+
+.grid-container {
+  max-width: 1080px;
+}
 
 // Helper Classes
 
@@ -20,6 +27,10 @@ body {
 
 .content-header {
  margin-top: 1rem; 
+}
+
+.header-container {
+  position: relative;
 }
 
 
@@ -99,11 +110,12 @@ strong {
 }
 
 .access-sizer {
-  margin-right: 0.75rem;
+  float: right;
+  margin-right: 7.5rem;
   
   .change-font {
     display: flex;
-    height: 50px;
+    height: 55px;
     margin-bottom: 1rem;
     border-bottom: 1px solid #DDD;
     
@@ -121,6 +133,7 @@ strong {
       
       &.active {
         color: $c-dark-grey;
+        font-weight: 800;
       }
       
       span {
@@ -145,7 +158,7 @@ strong {
   }
   
   .change-contrast {
-    padding: 0 1rem;
+    padding: 0 1rem 0.8rem; 
     
     input {
       height: 0.4rem;
@@ -171,6 +184,21 @@ strong {
   &:hover {
     -webkit-animation: bounce 1s ease-in ;
     animation: bounce 1s ease-in;
+  }
+}
+
+.portal-changer {
+  position: relative;
+  z-index: 2;
+  background: $c-white;
+  
+  > .button, .portal-options {
+    position: absolute;
+    right: 0;
+  }
+  
+  .portal-options .button {
+    margin-right: 0.5rem;
   }
 }
 
@@ -208,7 +236,17 @@ strong {
   }
 }
 
-// Accessibility Adjuster
+
+
+// Accessibility Adjustments
+
+html {
+  transition: font 0.3s ease, color 1s;
+}
+
+body {
+  transition: background 1s ease;
+}
 
 html.size0 {
   font-size: 90%;
@@ -216,6 +254,18 @@ html.size0 {
 
 html.size2 {
   font-size: 109%;
+}
+
+html.contrast0 {
+  body {
+    background-color: $c-lightest-grey;
+  }
+}
+
+html.contrast2 {
+  body {
+    background-color: $c-light-grey;
+  }
 }
 
 
