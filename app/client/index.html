@@ -18,7 +18,7 @@
           <div class="row" ng-controller="PortalCtrl">
             <div class="header-nav">
               <div class="portal-changer">
-                <a href="#" class="button primary active slide-left" ng-class="activePortal" ng-click="portalToggle = !portalToggle" ng-show="!portalToggle" ng-animate>Credit</a>
+                <a href="#" class="button primary active slide-left" ng-class="activePortal" ng-click="portalToggle = !portalToggle" ng-show="!portalToggle" ng-animate>{{activePortal}}</a>
                 <div class="portal-options slide-right" ng-show="portalToggle" ng-animate>
                   <a href="#" class="button primary agent" ng-click="changePortal('agent')">Agent</a>
                   <a href="#" class="button primary credit active" ng-click="changePortal('credit')">Credit</a>

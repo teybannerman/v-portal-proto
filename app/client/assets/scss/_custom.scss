@@ -211,10 +211,7 @@ strong {
 }
 
 .portal-options {
-  transition: all .3s ease-in-out;
-  -moz-animation: fadeInDown .3s ease-in ;
-  -webkit-animation: fadeIn .3s ease-in ;
-  animation:fadeInDown .3s ease-in ;
+  @extend .transition-all;
 }
 
 
@@ -255,8 +252,10 @@ strong {
 // Accordions
 
 .accordion {
+  margin-left: 1rem;
   
   .accordion-title {
+    margin-bottom: .5rem;
     border-bottom: 1px solid $c-lightest-grey;
     font-size: 1.5rem;
     line-height: 0.5;
@@ -516,21 +515,48 @@ html.contrast2 {
   }
   
   .card {
+    @extend .transition-all;
+    @include font-body('book');
     color: $c-dark-grey;
     border: 4px solid $c-lightest-grey;
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.45);
     margin-bottom: .9rem;
-    
-    .card-title {
-      
-    }
+    position: relative;
     
     .card-section {
-      
+      @extend .transition-all;
+    }
+    
+    .card-title {
+      margin: 0;
+    }
+    
+    .card-category {
+      @extend .transition-all;
+      @include font-body('semibold');
+      position: absolute;
+      width: 100%;
+      bottom: -1.6rem;
+      height: 1.6rem;
+      margin: 0;
+      padding: .5rem 1rem;
+      background: $c-voda-purple;
+      color: $c-white;
+      font-size: .8rem;
+      text-transform: uppercase;
     }
     
     &:hover {
       border-color: $c-voda-purple;
+      
+      .card-section {
+        padding-top: .25rem;
+        padding-bottom: 1.75rem;
+      }
+      
+      .card-category {
+        bottom: 0;
+      }
     }
   }
 }
@@ -548,3 +574,9 @@ html.contrast2 {
   padding-top: 3px;
 }
 
+.transition-all {
+  transition: all .3s ease-in-out;
+  -moz-animation: fadeInDown .3s ease-in ;
+  -webkit-animation: fadeIn .3s ease-in ;
+  animation:fadeInDown .3s ease-in ;
+}
