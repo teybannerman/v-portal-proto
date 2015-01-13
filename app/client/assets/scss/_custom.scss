@@ -113,6 +113,11 @@ strong {
   float: right;
   margin-right: 7.5rem;
   
+  .button {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
   .change-font {
     display: flex;
     height: 55px;
@@ -168,6 +173,12 @@ strong {
   .action-sheet {
     width: 180px;
     padding: 0;
+    box-shadow: none;
+    border: 1px solid $c-light-grey;
+    
+    &::before {
+      top: -11px;
+    }
   }
 }
 
@@ -448,6 +459,7 @@ html.contrast2 {
 	border-width: 6px;
 	margin-left: -6px;
 }
+
 
 // Miscellaneous UI Elements
 

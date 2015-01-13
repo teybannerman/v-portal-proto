@@ -110,7 +110,7 @@
 // $gray-light: lighten($gray, 8);
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 4px;
+ $global-radius: 0;
 // $global-rounded: 1000px;
 
 // We use this for default spacing
@@ -241,7 +241,7 @@
 // 6. Accordion
 // - - - - - - - - - - - - - - -
 
-// $accordion-border: 1px solid $gray-dark;
+ $accordion-border: 0;
 
 // $accordion-title-background: $gray-light;
 // $accordion-title-background-hover: smartscale($accordion-title-background, 5%);
@@ -321,11 +321,11 @@
 // 11. Card
 // - - - - - - - - - - - - - - -
 
-// $card-background: #fff;
+ $card-background: #fff;
 // $card-color: isitlight($card-background);
-// $card-border: 1px solid smartscale($card-background, 7%);
+ $card-border: 1px solid smartscale($card-background, 7%);
 // $card-radius: $global-radius;
-// $card-shadow: 0 1px 2px rgba(#000, 0.2);
+ $card-shadow: none;
 // $card-padding: $global-padding;
 // $card-margin: 0.5rem;
 
