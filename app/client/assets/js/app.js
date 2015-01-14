@@ -39,6 +39,8 @@
       $scope.activePortal = portal;
       $scope.portalToggle = !$scope.portalToggle;
       $('body').removeClass().addClass(portal);
+      $('.portal-options .button').removeClass('active');
+      $('.portal-options .' + portal).addClass('active');
     }
     
     $scope.changeFont = function(size) {

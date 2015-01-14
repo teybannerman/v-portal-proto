@@ -5,27 +5,36 @@ animationIn: fadeIn
 animationOut: fadeOut
 ---
 
-<div class="align-center grid-block">
-  <div class="grid-content">
-    
-      <div class="searcher">
-        <div class="search-text" ng-class="searchInputToggle"><input type="text" placeholder="Suche" ng-focus="searchInputToggle='selected'" ng-blur="searchInputToggle=''"/></div> 
-        <div class="search-select">in Allen Portalen <span class="triangle-down"></span>
-          <ul class="submenu">
-            <li> <a href="#">InfoWeb</a> </li>
-            <li> <a href="#">Hardware</a> </li>
-            <li> <a href="#">CallYa</a> </li>
-            <li> <a href="#">Wilma</a> </li>
-          </ul>
-        </div>
-      </div>
+<div class="align-center grid-block title-block">
+  
+  <div class="grid-content small-3 medium-3 large-2">
     
   </div>
+  
+  <div class="grid-content small-9 medium-9 large-8">
+    <div class="searcher">
+      <div class="search-text" ng-class="searchInputToggle"><input type="text" placeholder="Suche" ng-focus="searchInputToggle='selected'" ng-blur="searchInputToggle=''"/></div> 
+      <div class="search-select">in Allen Portalen <span class="triangle-down"></span>
+        <ul class="submenu">
+          <li> <a href="#">InfoWeb</a> </li>
+          <li> <a href="#">Hardware</a> </li>
+          <li> <a href="#">CallYa</a> </li>
+          <li> <a href="#">Wilma</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid-content small-12 medium-12 large-2">
+    
+  </div>
+  
 </div>
 
 <div class="grid-block">
   <div class="grid-content small-3 medium-3 large-2">
     <ul class="side-nav primary" role="navigation" title="Portal Link List">
+      <li role="menuitem"><a href="#">Home</a></li>
       <li role="menuitem" class="active"><a href="#">AskVodafone</a></li>
       <li role="menuitem"><a href="#">InfoWeb</a></li>
       <li role="menuitem"><a href="#">Hardware</a></li>
@@ -44,6 +53,7 @@ animationOut: fadeOut
         <div class="quicklinks-cols">
           
           <div class="col">
+            <h6>Services</h6>
             <div class="card">
               <div class="card-section">
                 <p class="card-title">Karte &amp; Netz</p>
@@ -54,7 +64,7 @@ animationOut: fadeOut
               <div class="card-section">
                 <p class="card-title">Mailbox &amp; Erreichbarkeit</p>
               </div>
-              <div class="card-category">Category</div>
+              <div class="card-category">Service</div>
             </div>
             <div class="card">
               <div class="card-section">
@@ -71,49 +81,58 @@ animationOut: fadeOut
           </div>
           
           <div class="col">
+            <h6>Tarrifs</h6>
             <div class="card">
               <div class="card-section">
                 <p class="card-title">Privat</p>
               </div>
-              <div class="card-category">Category</div>
+              <div class="card-category">Tarrifs</div>
             </div>
             <div class="card">
               <div class="card-section">
                 <p class="card-title">Red GB</p>
               </div>
+              <div class="card-category">Tarrifs</div>
             </div>
             <div class="card">
               <div class="card-section">
                 <p class="card-title">Smart</p>
               </div>
+              <div class="card-category">Tarrifs</div>
             </div>
             <div class="card">
               <div class="card-section">
                 <p class="card-title">Business</p>
               </div>
+              <div class="card-category">Tarrifs</div>
             </div>
           </div>
           
           <div class="col">
+            <h6>Tools</h6>
             <div class="card">
               <div class="card-section">
                 <p class="card-title">Infodocs</p>
               </div>
+              <div class="card-category">Tools</div>
             </div>
             <div class="card">
               <div class="card-section">
                 <p class="card-title">Gesprachleitfaden</p>
               </div>
+              <div class="card-category">Tools</div>
             </div>
             <div class="card">
               <div class="card-section">
                 <p class="card-title">Kias</p>
               </div>
+              <div class="card-category">Tools</div>
             </div>
             <div class="card">
               <div class="card-section">
                 <p class="card-title">Cheat Sheets</p>
               </div>
+              <div class="card-category">Tools</div>
             </div>
           </div>
           
@@ -121,7 +140,7 @@ animationOut: fadeOut
       </zf-accordion-item>
 
       <zf-accordion-item title="GeoWorld" active="true">
-      Collapsible allows toggable tabs. Click on a tab to open or close it.
+        <p><img src="/assets/images/map-demo.png" title="Demo Map"/></p>
       </zf-accordion-item>
 
     </zf-accordion>
@@ -129,6 +148,14 @@ animationOut: fadeOut
   </div>
 
   <div class="grid-content small-12 medium-12 large-2">
-    <p>test</p>
+    <p><a href="#" class="tertiary button expand">Phone Number</a></p>
+    <h6>Vorschlage</h6>
+    <ul class="side-nav secondary">
+      <li role="menuitem"><a href="#">Karte &amp; Netz</a></li>
+      <li role="menuitem"><a href="#">Mailbox &amp; Erreichbarkeit</a></li>
+      <li role="menuitem"><a href="#">Selfservice</a></li>
+      <li role="menuitem"><a href="#">Unterwegs</a></li>
+      <li role="menuitem"><a href="#">Internet &amp; Messaging</a></li>
+    </ul>
   </div>
 </div>
