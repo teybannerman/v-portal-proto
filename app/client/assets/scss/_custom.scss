@@ -177,7 +177,7 @@ strong {
   }
   
   .change-contrast {
-    padding: 0 1rem 0.8rem;
+    padding: 0 16px 12px;
     
     > div {
       height: 20px;
@@ -258,10 +258,15 @@ strong {
     .side-nav.primary li.active {
       border-left: 6px solid $color;
     }
-    .side-nav.primary.ver2 li a {
+    .side-nav.primary.ver2 li a,
+    .quicklinks-cols .card:hover
+    {
       border-color: $color;
     }
-    .side-nav.primary.ver2 li a:hover {
+    .side-nav.primary.ver2 li a:hover,
+    .quicklinks-cols .card:hover,
+    .quicklinks-cols .card .card-category
+    {
       background: $color;
     }
     .triangle-down {
@@ -340,6 +345,7 @@ html.contrast0 {
 
   .searcher {
     border-bottom: none;
+    margin-bottom: 2rem;
   }
   
   .accordion .accordion-title {
@@ -368,6 +374,7 @@ html.contrast2 {
   
   .searcher {
     border-bottom: none;
+    margin-bottom: 2rem;
   }
   
   .searcher .search-select {
@@ -379,6 +386,7 @@ html.contrast2 {
   
     input {
       background: rgba(255,255,255,0.06);
+      color: $c-white;
       padding-left: .6rem;
       padding-right: .6rem;
     }
@@ -391,7 +399,7 @@ html.contrast2 {
   
   .quicklinks-cols .card {
     border-color: #511553;
-    @include font-body('semibold');
+    //@include font-body('semibold');
   }
 }
 
@@ -487,12 +495,13 @@ html.contrast2 {
 // Searcher
 
 .searcher {
+  @extend .transition-all;
   @include font-body('light');
   font-size: 2rem;
   text-align: center;
-  margin: 0 1rem;
-  padding-bottom: 3rem;
-  //border-bottom: 1px solid $c-lightest-grey;
+  margin: 0 1rem 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $c-lightest-grey;
   
   > div {
     display: inline-block;
