@@ -107,6 +107,10 @@ strong {
       background: $btn-primary-bg;
       color: $c-white;
     }
+    
+    &.expand {
+      padding: 0.5rem 0 0.6rem;
+    }
   }
   
   &.tertiary {
@@ -116,6 +120,14 @@ strong {
     border: 1px solid $c-medium-grey;
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+  
+  &.icobtn {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
   }
 }
 
@@ -491,6 +503,12 @@ html.contrast2 {
   }
 }
 
+.side-nav.special {
+  li a {
+    color: $c-voda-purple;
+  }
+}
+
 
 // Searcher
 
@@ -687,6 +705,65 @@ html.contrast2 {
 }
 
 
+// Phone Widget
+
+.phone-widget {
+  margin: 0 0 2rem 0;
+  
+}
+.phone-widget-dormant {
+  .button {
+    margin: 0;
+  }
+}
+.phone-widget-form {
+  border: 1px solid $c-voda-purple;
+  border-radius: $btn-primary-radius;
+  padding: .2rem .3rem;
+  
+  .phone-widget-input {
+    font-family: $font-body;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    margin: .3rem .5rem 0 .6rem;
+    padding: 0;
+    border: 0;
+    line-height: 1rem;
+  }
+  .button {
+    float: right;
+  }
+}
+.phone-widget-active {
+  clear: both;
+  
+  .pw-header {
+    padding-bottom: 1rem; 
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $c-light-grey;
+    position: relative;
+    
+    .button {
+      position: absolute;
+      top: .25rem;
+      right: .35rem;
+    }
+  }
+  .pw-header p {
+    @include font-body('bold');
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+    color: $c-voda-purple;
+    margin: 0;
+    line-height: 1rem;
+  }
+  .pw-header .number {
+    color: $c-medium-grey;
+  }
+}
+
+
+
 // Miscellaneous UI Elements
 
 .triangle-down {
@@ -704,4 +781,12 @@ html.contrast2 {
   -moz-animation: fadeInDown .3s ease-in ;
   -webkit-animation: fadeIn .3s ease-in ;
   animation:fadeInDown .3s ease-in ;
+}
+
+.celltbl {
+  display: table !important;
+}
+.cell {
+  display: table-cell !important;
+  vertical-align: top;
 }
