@@ -94,7 +94,7 @@ strong {
   
   &.primary, &.secondary, &.tertiary {
     @include font-body('semibold');
-    background: $c-white;
+    background-color: $c-white;
     color: $btn-primary-bg;
     border: 1px solid $btn-primary-bg;
     border-radius: $btn-primary-radius;
@@ -104,7 +104,7 @@ strong {
   &.primary {
     
     &.active {
-      background: $btn-primary-bg;
+      background-color: $btn-primary-bg;
       color: $c-white;
     }
     
@@ -115,7 +115,7 @@ strong {
   
   &.tertiary {
     text-transform: none;
-    background: $c-white;
+    background-color: $c-white;
     color: $c-voda-purple;
     border: 1px solid $c-medium-grey;
     padding-left: 0.875rem;
@@ -263,7 +263,9 @@ strong {
     .side-nav.primary li a,
     .side-nav.primary li.active a,
     .side-nav.primary li.active > a:first-child:not(.button),
-    .button.tertiary, .tertiary-buttons > .button
+    .button.tertiary, .tertiary-buttons > .button,
+    .phone-widget-active .pw-header p,
+    .side-nav.special li a
     {
       color: $color;
     }
@@ -271,15 +273,18 @@ strong {
       border-left: 6px solid $color;
     }
     .side-nav.primary.ver2 li a,
-    .quicklinks-cols .card:hover
+    .quicklinks-cols .card:hover,
+    .phone-widget-form,
+    .button.primary
     {
       border-color: $color;
     }
     .side-nav.primary.ver2 li a:hover,
     .quicklinks-cols .card:hover,
-    .quicklinks-cols .card .card-category
+    .quicklinks-cols .card .card-category,
+    .button.primary.active
     {
-      background: $color;
+      background-color: $color;
     }
     .triangle-down {
       border-top-color: $color;
@@ -291,7 +296,7 @@ strong {
     color: $color;
     
     &.active {
-      background: $color;
+      background-color: $color;
     }
   }
 }
@@ -709,9 +714,16 @@ html.contrast2 {
 
 .phone-widget {
   margin: 0 0 2rem 0;
-  
+  position: relative;
+  min-height: 2rem;
 }
 .phone-widget-dormant {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  
   .button {
     margin: 0;
   }
@@ -720,6 +732,11 @@ html.contrast2 {
   border: 1px solid $c-voda-purple;
   border-radius: $btn-primary-radius;
   padding: .2rem .3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
   
   .phone-widget-input {
     font-family: $font-body;
@@ -732,6 +749,9 @@ html.contrast2 {
   }
   .button {
     float: right;
+    background-image: url('../images/icon-tick.png');
+    background-repeat: no-repeat;
+    background-position: .35rem .4rem;
   }
 }
 .phone-widget-active {
@@ -740,13 +760,16 @@ html.contrast2 {
   .pw-header {
     padding-bottom: 1rem; 
     margin-bottom: 1rem;
-    border-bottom: 1px solid $c-light-grey;
+    border-bottom: 1px solid $c-lightest-grey;
     position: relative;
     
     .button {
       position: absolute;
       top: .25rem;
       right: .35rem;
+      background-image: url('../images/icon-close.png');
+      background-repeat: no-repeat;
+      background-position: .4rem .4rem;
     }
   }
   .pw-header p {
@@ -755,12 +778,23 @@ html.contrast2 {
     font-size: 0.8125rem;
     color: $c-voda-purple;
     margin: 0;
-    line-height: 1rem;
+    line-height: 0;
+    padding-top: 1rem;
   }
   .pw-header .number {
-    color: $c-medium-grey;
+    color: $c-dark-grey;
   }
 }
+
+//.phone-widget-dormant, .phone-widget-form, .phone-widget-active {
+//  &.ng-hide-add {
+//    -webkit-animation: fadeOutLeftBig 0.4s;
+//    display: block!important;
+//  }
+//  &.ng-hide-remove {
+//    -webkit-animation: fadeInLeftBig 0.4s;
+//  }
+//}
 
 
 

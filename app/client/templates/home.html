@@ -149,16 +149,16 @@ animationOut: fadeOut
 
   <div class="grid-content small-12 medium-12 large-2">
     <div class="phone-widget">
-      <div class="phone-widget-dormant" ng-show="!phoneWidgetClicked">
+      <div class="phone-widget-dormant slide-right" ng-show="!phoneWidgetClicked">
         <a href="#" class="primary button active expand" ng-click="phoneWidgetClicked = !phoneWidgetClicked">Add Phone Number</a>
       </div>
-      <div class="phone-widget-form celltbl" ng-show="phoneWidgetClicked && !phoneWidgetInput">
+      <div class="phone-widget-form celltbl slide-top" ng-show="phoneWidgetClicked && !phoneWidgetInput">
         <div class="cell">
           <input type="text" class="phone-widget-input" placeholder="Phone Number"/>
         </div>
         <a href="#" class="cell primary button active icobtn" ng-click="phoneWidgetInput = true"></a>
       </div>
-      <div class="phone-widget-active" ng-show="phoneWidgetInput">
+      <div class="phone-widget-active slide-top" ng-show="phoneWidgetInput">
         <div class="pw-header">
           <p>John Doe</p>
           <p class="number">+49 162 9177158</p>
