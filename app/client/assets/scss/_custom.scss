@@ -794,6 +794,12 @@ html.contrast2 {
   height: 8rem;
   background: $c-white;
   box-shadow: 0 -1px 4px 0 rgba(0,0,0,0.16);
+  overflow: hidden;
+  transition: height .3s ease-in-out;
+  
+  &.collapsed {
+    height: 2.3rem;
+  }
 }
 
 .news-panel-header {
@@ -865,6 +871,16 @@ html.contrast2 {
       font-size: .95rem;
       color: $c-dark-grey;
     }
+    
+    .icon0 {
+      margin-right: .75rem;
+      vertical-align: bottom;
+    }
+    
+    .icon1 {
+      margin-left: .75rem;
+      vertical-align: bottom;
+    }
   }
 }
 
@@ -877,6 +893,16 @@ html.contrast2 {
   width: 16px;
   height: 16px;
   display: inline-block;
+  cursor: pointer;
+  opacity: 0.8;
+  
+  &.inactive {
+    opacity: 0.25;
+  }
+  
+  &:hover {
+    opacity: 1;
+  }
   
   &.icon1 {
     background-position: -40px 0;
