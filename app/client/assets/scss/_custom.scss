@@ -25,6 +25,22 @@ html, body, .grid-frame {
   overflow: visible;
 }
 
+.aktionen {
+  color: #428600 !important;
+}
+
+.portal2 {
+  color: $c-voda-purple;
+}
+
+.portal3 {
+  color: $c-dark-grey;
+}
+
+.portal4 {
+  color: $c-voda-orange;
+}
+
 
 // Layout
 
@@ -774,13 +790,54 @@ html.contrast2 {
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 0 .5rem;
   height: 8rem;
   background: $c-white;
   box-shadow: 0 -1px 4px 0 rgba(0,0,0,0.16);
 }
 
 .news-panel-header {
+  @include font-body('semibold');
+  height: 2.3rem;
+  padding-top:.8rem;
+  font-size: .7rem;
   border-bottom: 1px solid $c-lightest-grey;
+  
+  .news-panel-header-links {
+    a {
+      display: inline-block;
+      color: $c-dark-grey;
+
+      &:not(:last-child) {
+        &::after {
+          content: '·';
+          padding: 0 .4rem 0 .5rem;
+        }
+      }
+    }
+  }
+  
+  .news-panel-header-icons {
+    a {
+      margin-left: 1.25rem;
+    }
+  }
+}
+
+.news-panel-items {
+  
+  a {
+    cursor: pointer;
+    color: $c-medium-grey;
+  }
+  h5 {
+    font-size: .9rem;
+    margin: .7rem 0 0;
+    border: none;
+  }
+  .news-meta {
+    font-size: .85rem;
+  }
 }
 
 .news-content {
@@ -788,6 +845,7 @@ html.contrast2 {
   
   h5 {
     border-bottom: none;
+    font-size: 1.2rem;
   }
   
   p {
@@ -810,6 +868,36 @@ html.contrast2 {
   }
 }
 
+
+// Icons 
+
+.icons {
+  background-color: transparent;
+  background-image: url('../images/icons.png');
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  
+  &.icon1 {
+    background-position: -40px 0;
+  }
+  
+  &.icon2 {
+    background-position: -80px 0;
+  }
+  
+  &.icon3 {
+    background-position: -120px 0;
+  }
+  
+  &.icon4 {
+    background-position: -160px 0;
+  }
+  
+  &.icon5 {
+    background-position: -200px 0;
+  }
+}
 
 // Miscellaneous UI Elements
 
