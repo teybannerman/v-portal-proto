@@ -359,10 +359,19 @@ html.size2 {
 }
 
 html.contrast0 {
+  
+  body {
+    background-color: $contrast0-bg;
+    background-position: left -210px;
+  }
 
   .searcher {
     border-bottom: none;
     margin-bottom: 2rem;
+  }
+  
+  .side-nav.primary li:not(.active) {
+    border-color: $contrast0-bg;
   }
   
   .accordion .accordion-title {
@@ -377,6 +386,10 @@ html.contrast0 {
     height: 0;
     margin: 0;
     opacity: 0;
+  }
+  
+  .card {
+    background: transparent;
   }
 }
 
